@@ -55,6 +55,27 @@ $navbar-default-bg: black;
   padding-bottom: 15px;
 }
 
+.article-meta-details {
+  border-top: 1px solid #eaeaea;
+  margin-top: 15px;
+}
+
+.listing {
+  list-style: none;
+  padding-left: 0;
+}
+
+.badge {
+  background-color: #CEF6F5;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.input_checkbox input {
+  width: auto !important;
+}
+
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -78,14 +99,4 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
-}
-
-.article-meta-details {
-  border-top: 1px solid #eaeaea;
-  margin-top: 15px;
-}
-
-.listing {
-  list-style: none;
-  padding-left: 0;
 }
