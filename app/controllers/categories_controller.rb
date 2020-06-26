@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CategoriesController < ApplicationController
   before_action :require_admin, except: %i[index show]
 
@@ -12,7 +14,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      flash[:success] = "Category was successfully created"
+      flash[:success] = 'Category was successfully created'
       redirect_to categories_path
     else
       render 'new'
@@ -26,7 +28,7 @@ class CategoriesController < ApplicationController
   def update
     @category = Category.find(params[:id])
     if @category.update(category_params)
-      flash[:success] = "Category name was successfully updated"
+      flash[:success] = 'Category name was successfully updated'
       redirect_to category_path(@category)
     else
       render 'edit'
@@ -46,7 +48,7 @@ class CategoriesController < ApplicationController
 
   def require_admin
     if !logged_in? || (logged_in? && !current_user.admin?)
-      flash[:danger] = "Only admins can perform that action"
+      flash[:danger] = 'Only admins can perform that action'
       redirect_to categories_path
     end
   end

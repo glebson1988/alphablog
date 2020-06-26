@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[edit update show destroy]
   before_action :require_user, except: %i[index show]
@@ -53,7 +55,7 @@ class ArticlesController < ApplicationController
 
   def require_same_user
     if current_user != @article.user && !current_user.admin?
-      flash[:danger] = "You can only edit or delete your own article"
+      flash[:danger] = 'You can only edit or delete your own article'
       redirect_to root_path
     end
   end
