@@ -39,4 +39,3 @@ http://localhost:3000
 ```
 rails test
 ```
-https://alphablog-glebson.herokuapp.com/
